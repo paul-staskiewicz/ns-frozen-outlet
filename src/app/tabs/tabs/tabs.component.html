@@ -1,0 +1,28 @@
+<MDBottomNavigation
+  #bottomNavigation
+  [selectedIndex]="selectedIndex$ | async"
+  (selectedIndexChanged)="selectedIndexChanged($any($event))"
+>
+  <MDTabStrip>
+    <MDTabStripItem>
+      <Label text="List" fontSize="18"></Label>
+    </MDTabStripItem>
+    <MDTabStripItem>
+      <Label text="Process" fontSize="18"></Label>
+    </MDTabStripItem>
+  </MDTabStrip>
+
+  <MDTabContentItem>
+    <page-router-outlet
+      actionBarVisibility="never"
+      name="list"
+    ></page-router-outlet>
+  </MDTabContentItem>
+
+  <MDTabContentItem>
+    <page-router-outlet
+      actionBarVisibility="never"
+      name="process"
+    ></page-router-outlet>
+  </MDTabContentItem>
+</MDBottomNavigation>
