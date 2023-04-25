@@ -21,7 +21,7 @@ export class Step3Component implements OnInit, OnDestroy {
   public ngOnDestroy() {}
 
   public goToList() {
-    console.log("go to step 3");
+    console.log("go to list");
 
     //navigate back to step 1
     this.routerExtensions.navigate(["../"], {
